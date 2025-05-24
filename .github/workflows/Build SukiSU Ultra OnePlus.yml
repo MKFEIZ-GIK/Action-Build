@@ -6,7 +6,7 @@ on:
         type: choice
         description: "分支"
         required: true
-        default: sm8450
+        default: sm8475
         options:
           - sm7550
           - sm7675

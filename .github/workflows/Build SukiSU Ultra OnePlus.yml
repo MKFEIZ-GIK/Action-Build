@@ -51,7 +51,7 @@ on:
         default: "susfs-main/MKfeiz"
       BUILD_TIME:
         type: string
-        description: "自定义构建时间 (输入F使用当前时间)"
+        description: "自定义构建时间 (输入N使用当前时间)"
         required: false
         default: "Fri May 23 14:24:20 UTC 2025"
       SUFFIX:
@@ -764,7 +764,7 @@ jobs:
         shell: bash
         run: |
           INPUT_TIME="${{ github.event.inputs.BUILD_TIME }}"
-          if [[ -n "$INPUT_TIME" && "$INPUT_TIME" != *[Ff]* ]]; then
+          if [[ -n "$INPUT_TIME" && "$INPUT_TIME" != *[Nn]* ]]; then
             DATESTR="$INPUT_TIME"
             echo "Using input BUILD_TIME: $DATESTR"
           else
